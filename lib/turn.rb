@@ -22,7 +22,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
-  input_to_index(user_input)
+  puts input_to_index(user_input)
   valid_move?(board, index)
   puts move(board, index, token)
   puts display_board(board)
