@@ -10,6 +10,8 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
+input_to_index(user_input) = index
+
 def valid_move?(board, index)
   index.between?(0, 8) && board[index] == " "
 end
@@ -21,7 +23,7 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   user_input = gets.strip
-  puts input_to_index(user_input)
+  input_to_index(user_input)
   valid_move?(board, index)
   puts move(board, index, token)
   puts display_board(board)
