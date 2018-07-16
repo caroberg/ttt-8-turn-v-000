@@ -11,7 +11,6 @@ def input_to_index(user_input)
 end
 
 def valid_move?(board, index)
-  index = input_to_index(user_input)
   index.between?(0, 8) && board[index] == " "
 end
 
