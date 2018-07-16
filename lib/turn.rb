@@ -10,13 +10,13 @@ def input_to_index(user_input)
   user_input.to_i - 1
 end
 
-input_to_index(user_input) = index
-
 def valid_move?(board, index)
+  input_to_index(user_input) = index
   index.between?(0, 8) && board[index] == " "
 end
 
 def move(board, index, token = "X")
+  input_to_index(user_input) = index
   board[index] = token
 end
 
